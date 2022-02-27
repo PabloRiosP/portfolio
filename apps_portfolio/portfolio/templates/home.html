@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    {% load static %}
+
+    {% include 'partials/welcome_screen.html' %} 
+
+    {% if projects|length > 0 %}
+    
+    <div class="row my-4 text-center">
+
+        <h3>My projects</h3>
+
+        {% for project in projects %}
+
+            <div class="col-md-4 p-4">
+                <div class="card bg-title card-project">
+                    <img src="{{project.image.url}}" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h2>{{project.title}}</h2>
+                        <p>{{project.description}}</p>
+
+                        {% if project.url %}
+                            <a href="{{project.url}}">{{project.url}}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+{% endblock %}

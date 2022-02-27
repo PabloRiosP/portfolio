@@ -1,0 +1,7 @@
+media
+venv
+dj_portfolio/__pycache__
+apps_portfolio/*/__pycache__
+apps_portfolio/*/migrations/__pycache__
+apps_portfolio/*/migrations/*
+!apps_portfolio/*/migrations/__init__.py

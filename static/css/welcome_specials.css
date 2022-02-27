@@ -1,0 +1,60 @@
+/* Transición desde pantalla completa a cabecera normal */
+/* Botones */
+@keyframes scrolldown-buttons {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+/* Cabecera */
+@keyframes scrolldown-frame {
+    from {
+        height: 100vh;
+    }
+    to {
+        height: 50%;
+    }
+}
+
+.scrolldown-buttons {
+    animation-name: scrolldown-buttons;
+    animation-duration: 1s;
+}
+
+.scrolldown-frame {
+    animation-name: scrolldown-frame;
+    animation-duration: 1s;
+}
+
+/* Transición desde cabecera normal a pantalla completa */
+/* Botones */
+@keyframes setontop-buttons {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+/* Cabecera */
+@keyframes setontop-frame {
+    from {
+        height: 50%;
+    }
+    to {
+        height: 100vh;
+    }
+}
+
+.setontop-buttons {
+    animation-name: setontop-buttons;
+    animation-duration: 1s;
+}
+
+.setontop-frame {
+    animation-name: setontop-frame;
+    animation-duration: 1s;
+}
+

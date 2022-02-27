@@ -1,0 +1,28 @@
+:root {
+    --fondoPrincipal:       #E2E4FF;
+    --fondoCabecera:        #283080;
+    --fondoLaterales:       #7079DE;
+}
+
+body {
+    background: var(--fondoPrincipal);
+}
+
+.fullscreen {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background: var(--fondoCabecera);
+}
+
+.card-project:hover {
+    border: 1px solid #FFF;
+    cursor: pointer;
+}
+
+#avatar {
+    width: 100%;
+    border-radius: 50%;
+}
