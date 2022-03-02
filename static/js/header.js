@@ -1,14 +1,9 @@
-let scrolling = false;
-
-window.scroll = () => {
-    scrolling = true;
-};
-
-setInterval(() => {
-    if (scrolling) {
-        scrolling = false;
-        // code
-        console.log(scrollX);
-    }
-},300);
-
+window.onwheel = e => {
+  if(e.deltaY >= 0){
+    // Scrolling Down with mouse
+    console.log('Scroll Down');
+  } else {
+    // Scrolling Up with mouse
+    console.log('Scroll Up');
+  }
+}
