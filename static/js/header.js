@@ -1,9 +1,13 @@
-window.onwheel = e => {
-  if(e.deltaY >= 0){
+document.addEventListener('wheel', function(e) {
+  if (e.deltaY >= 0) {
     // Scrolling Down with mouse
-    console.log('Scroll Down');
+    console.log('S Down');
   } else {
     // Scrolling Up with mouse
-    console.log('Scroll Up');
+    console.log('S Up');
   }
-}
+});
+
+document.addEventListener('keydown', function(e) {
+  console.log(e.key);
+});
