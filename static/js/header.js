@@ -1,17 +1,23 @@
 var locked = false;
 
+var btn_div = document.getElementById("welcome_buttons");
+var btn_div_h = window.getComputedStyle(btn_div).getPropertyValue('height');
+
+console.log(btn_div_h)
+console.log(typeof btn_div_h)
+
 function animate() {
-    btns = document.getElementById("welcome_buttons");
-    hder = document.getElementById("welcome_screen");
 
-    btns.classList.add("scrolldown-buttons");
-    hder.classList.add("scrolldown-frame");
+    btns = document.querySelectorAll("#welcome_buttons a");
+    //hder = document.getElementById("welcome_screen");
 
-    btns.addEventListener("animationend",
-        () => btns.style.display = "none", {
-            once: true
-        }
-    );
+    btn_div.classList.add("scrolldown-buttons");
+    //hder.classList.add("scrolldown-frame");
+
+    /*setTimeout(function () {
+        btns.style.display = "none";
+        btn_div.style.display = "none";
+    }, 2000);*/
 }
 
 function onWheelReaction() {
@@ -39,4 +45,3 @@ document.addEventListener('keydown', function(e) {
         onKeyDownReaction(e);
     }
 });
-
