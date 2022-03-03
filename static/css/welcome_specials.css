@@ -3,29 +3,35 @@
 @keyframes scrolldown-buttons {
     from {
         opacity: 1.0;
+        height: auto;
     }
     to {
         opacity: 0.0;
+        height: 0px;
     }
 }
 /* Cabecera */
 @keyframes scrolldown-frame {
     from {
         height: 100vh;
+        background: #283080;
     }
     to {
-        height: 50%;
+        height: 100%;
+        background: #288030;
     }
 }
 
 .scrolldown-buttons {
     animation-name: scrolldown-buttons;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 .scrolldown-frame {
     animation-name: scrolldown-frame;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 /* Transición desde cabecera normal a pantalla completa */

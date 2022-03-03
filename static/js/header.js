@@ -1,13 +1,42 @@
+var locked = false;
+
+function animate() {
+    btns = document.getElementById("welcome_buttons");
+    hder = document.getElementById("welcome_screen");
+
+    btns.classList.add("scrolldown-buttons");
+    hder.classList.add("scrolldown-frame");
+
+    btns.addEventListener("animationend",
+        () => btns.style.display = "none", {
+            once: true
+        }
+    );
+}
+
+function onWheelReaction() {
+    locked = true;
+    animate();
+}
+
+function onKeyDownReaction(e) {
+    let k = e.key.toString();
+    console.log(k);
+    if (k === 'ArrowDown' || k === 'ArrowUp') {
+        locked = true;
+        animate();
+    }
+}
+
 document.addEventListener('wheel', function(e) {
-  if (e.deltaY >= 0) {
-    // Scrolling Down with mouse
-    console.log('S Down');
-  } else {
-    // Scrolling Up with mouse
-    console.log('S Up');
-  }
+    if (!locked) {
+        onWheelReaction();
+    }
 });
 
 document.addEventListener('keydown', function(e) {
-  console.log(e.key);
+    if (!locked) {
+        onKeyDownReaction(e);
+    }
 });
+

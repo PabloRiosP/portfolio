@@ -3,6 +3,8 @@
 {% block content %}
 
     {% load static %}
+    
+    <link href="{% static 'css/welcome_specials.css' %}" rel="stylesheet" type="text/css">
 
     {% include 'partials/welcome_screen.html' %} 
 
@@ -33,5 +35,7 @@
     </div>
 
     {% endif %}
+
+    <script src="{% static 'js/header.js' %}" type="text/javascript"></script>
 
 {% endblock %}
