@@ -1,66 +1,41 @@
 /* Transición desde pantalla completa a cabecera normal */
 /* Botones */
 @keyframes scrolldown-buttons {
-    from {
+    0% {
         opacity: 1.0;
-        height: auto;
+        height: 50px;
     }
-    to {
+    50% {
+        opacity: 0.0;
+        height: 50px;
+    }
+    100% {
         opacity: 0.0;
         height: 0px;
     }
 }
 /* Cabecera */
-@keyframes scrolldown-frame {
+/*@keyframes scrolldown-frame {
     from {
         height: 100vh;
         background: #283080;
+        max-height: 100vh;
     }
     to {
-        height: 100%;
+        height: initial;
         background: #288030;
+        max-height: none;
     }
-}
+}*/
 
 .scrolldown-buttons {
     animation-name: scrolldown-buttons;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-.scrolldown-frame {
+/*.scrolldown-frame {
     animation-name: scrolldown-frame;
-    animation-duration: 1s;
+    animation-duration: 5s;
     animation-fill-mode: forwards;
-}
-
-/* Transición desde cabecera normal a pantalla completa */
-/* Botones */
-@keyframes setontop-buttons {
-    from {
-        opacity: 0.0;
-    }
-    to {
-        opacity: 1.0;
-    }
-}
-/* Cabecera */
-@keyframes setontop-frame {
-    from {
-        height: 50%;
-    }
-    to {
-        height: 100vh;
-    }
-}
-
-.setontop-buttons {
-    animation-name: setontop-buttons;
-    animation-duration: 1s;
-}
-
-.setontop-frame {
-    animation-name: setontop-frame;
-    animation-duration: 1s;
-}
-
+}*/
