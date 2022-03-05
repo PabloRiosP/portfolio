@@ -1,28 +1,38 @@
 :root {
-    --fondoPrincipal:       #E2E4FF;
-    --fondoCabecera:        #283080;
-    --fondoLaterales:       #7079DE;
+	--fondoPrincipal:       #E2E4FF;
+	--fondoCabecera:        #283080;
+	--fondoLaterales:       #7079DE;
 }
 
 body {
-    background: var(--fondoPrincipal);
+	background: var(--fondoPrincipal);
 }
 
-.fullscreen {
-    height: 100vh;
-    width: 100vw;
-}
+/*.fullscreen div.row {
 
-header {
-    background: var(--fondoCabecera);
+}*/
+
+#welcome_screen {
+	background: var(--fondoCabecera);
+	height: 100vh;
+	width: 100vw;
 }
 
 .card-project:hover {
-    border: 1px solid #FFF;
-    cursor: pointer;
+	border: 1px solid #FFF;
+	cursor: pointer;
 }
 
-#avatar {
-    width: 100%;
-    border-radius: 50%;
+#welcome_buttons a {
+	display: inherit;
 }
+/*
+#avatar {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+#avatar-container {
+    height: 100%;
+}*/

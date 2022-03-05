@@ -1,0 +1,25 @@
+{% load static %}
+
+<header id="welcome_screen" class="container-fluid d-flex align-items-center justify-content-center">
+	<div class="row p-5">
+		<div class="col-md-8 my-auto text-light p-5">
+			<h1>I'm <strong>Pablo Ríos</strong></h1>
+			<h3>AI Developer and Data Scientist</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra tortor mi, in tempor erat tincidunt sed. Donec facilisis est mollis maximus tincidunt. Integer mattis velit fringilla enim bibendum mattis. Proin non facilisis dui, et venenatis lacus. Donec mattis aliquam enim, dictum eleifend ante maximus in. Pellentesque elementum consectetur risus ac commodo. Ut vestibulum elit quis est lobortis, vitae placerat nisl pretium. Sed vitae vestibulum diam. Mauris gravida tortor vitae nisi imperdiet, sit amet tristique quam ullamcorper. Proin sollicitudin, mi id ultrices placerat, risus ex pulvinar dui, pretium mattis ex lacus at nibh.</p>
+			<div id="welcome_buttons" class="d-flex justify-content-start">
+			    <a href="{% static 'documents/Fake CV.pdf' %}"
+			     class="btn btn-light btn-lg rounded-0 my-3">
+				Download CV
+			    </a>
+			    <a href="#" class="btn btn-outline-light btn-lg rounded-0 my-3 mx-4">
+				Blog
+			    </a>
+			    <a href="#" class="btn btn-outline-light btn-lg rounded-0 my-3">
+				Contact Form
+			    </a>
+			</div>
+    </div>
+    <div id="avatar-container" class="col-md-4 d-flex align-items-center p-5">
+        <img id="avatar" src="{% static 'img/avatar/mrx.jpg' %}" alt="">
+    </div>
+</header>

@@ -1,23 +1,19 @@
 var locked = false;
 
-var btn_div = document.getElementById("welcome_buttons");
-var btn_div_h = window.getComputedStyle(btn_div).getPropertyValue('height');
-
-console.log(btn_div_h)
-console.log(typeof btn_div_h)
-
 function animate() {
+	let btns = document.querySelectorAll("#welcome_buttons a");
+	let hder = document.getElementById("welcome_screen");
+	let btn_div = document.getElementById("welcome_buttons");
+	//let pic = document.getElementById("avatar");
 
-    btns = document.querySelectorAll("#welcome_buttons a");
-    //hder = document.getElementById("welcome_screen");
+	btn_div.classList.add("sd-buttons");
+	hder.classList.add("sd-frame");
+    //pic.classList.add("sd-avatar");
 
-    btn_div.classList.add("scrolldown-buttons");
-    //hder.classList.add("scrolldown-frame");
-
-    /*setTimeout(function () {
-        btns.style.display = "none";
-        btn_div.style.display = "none";
-    }, 2000);*/
+	setTimeout(function () {
+		btns.style.display = "none";
+		btn_div.style.display = "none";
+	}, 2000);
 }
 
 function onWheelReaction() {
@@ -27,7 +23,6 @@ function onWheelReaction() {
 
 function onKeyDownReaction(e) {
     let k = e.key.toString();
-    console.log(k);
     if (k === 'ArrowDown' || k === 'ArrowUp') {
         locked = true;
         animate();
