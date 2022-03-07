@@ -24,14 +24,16 @@
 	}
 }
 /* Avatar */
-/*@keyframes scrolldown-avatar {
+@keyframes scrolldown-avatar {
 	from {
-		height: 100%;
+		max-height: 100%;
+        padding: 15px;
 	}
 	to {
-		height: 30vh;
+		max-height: 70%;
+        padding: 35px;
 	}
-}*/
+}
 
 .sd-buttons {
 	animation-name: scrolldown-buttons;
@@ -45,8 +47,8 @@
 	animation-fill-mode: forwards;
 }
 
-/*.sd-avatar {
+.sd-avatar {
 	animation-name: scrolldown-avatar;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
-}*/
+}
