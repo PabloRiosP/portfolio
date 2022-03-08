@@ -45,11 +45,10 @@ body {
 }
 
 #nav-bar {
-    background: var(--header-bg);
+    background: red;/*var(--header-bg);*/
     position: fixed;
-    top: -50px;
+    top: -200px;
     width: 100%;
     display: block;
-    transition: top 0.5s;
     z-index: 1;
 }

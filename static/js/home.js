@@ -1,10 +1,18 @@
 var locked = false;
 
+var bar = document.getElementById("nav-bar");
+
+var barheight = window.getComputedStyle(bar, null).getPropertyValue("height").toString();
+
+bar.style.top = `-${barheight}`;
+bar.style.transition = "top 0.5s";
+
 function transitions() {
     // Webpage Elements
     let header = document.getElementById("welcome_screen");
     let btns = document.getElementById("welcome_buttons");
-    let bar = document.getElementById("nav-bar");
+
+    console.log(window.getComputedStyle(bar, null).getPropertyValue("height").toString());
 
     // Element Attributes
     let hdheight = parseInt(window.getComputedStyle(header, null).getPropertyValue("height").toString());
@@ -13,9 +21,10 @@ function transitions() {
     // Attributes calculation for transitions
     hdheight = parseInt((hdheight*2)/3);
 
-    // Applying immediate trasnsitions
+    // Applying immediate styles and transitions
+    header.style.position = "relative";
     btns.style.height = btnsheight;
-    btns.style.opacity = 0.0;
+    btns.style.opacity = "0.0";
 
     // Applying transitions with delay
     // 0.5s
