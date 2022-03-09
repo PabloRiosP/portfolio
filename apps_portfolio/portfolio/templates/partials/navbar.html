@@ -1,17 +1,20 @@
 {% load static %}
 
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark bg-title">
-  <div class="container">
-    <a class="navbar-brand fw-bold fst-italic" href="/">XD</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="btn btn-outline-light rounded-0 btn-md mx-3 py-auto" href="{#{% url 'blog:posts' %}#}#">Blog</a>
-        </li>
-        <li class="nav-item d-flex align-items-center">
-          <a class="btn btn-light text-dark rounded-0 btn-md" href="{% static 'documents/Fake CV.pdf' %}">Download CV</a>
-        </li>
-      </ul>
+    <div class="container">
+        <a class="navbar-brand fw-bold fst-italic" href="/">XD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="btn btn-outline-light rounded-0 btn-md mx-3 py-auto" href="#">Blog</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+                <a class="btn btn-light text-dark rounded-0 btn-md" href="#">Download CV</a>
+            </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
