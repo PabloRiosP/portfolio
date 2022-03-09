@@ -1,18 +1,17 @@
 var locked = false;
 
+var header = document.getElementById("welcome_screen");
 var bar = document.getElementById("nav-bar");
 
 var barheight = window.getComputedStyle(bar, null).getPropertyValue("height").toString();
 
 bar.style.top = `-${barheight}`;
 bar.style.transition = "top 0.5s";
+//header.style.marginBottom = barheight;
 
 function transitions() {
     // Webpage Elements
-    let header = document.getElementById("welcome_screen");
     let btns = document.getElementById("welcome_buttons");
-
-    console.log(window.getComputedStyle(bar, null).getPropertyValue("height").toString());
 
     // Element Attributes
     let hdheight = parseInt(window.getComputedStyle(header, null).getPropertyValue("height").toString());
@@ -30,7 +29,7 @@ function transitions() {
     // 0.5s
     setTimeout(function () {
         header.style.height = `${hdheight}px`;
-        header.style.top = "50px";
+        header.style.marginTop = barheight;
         bar.style.top = "0px";
         btns.style.transition = "height 0.5s";
         btns.style.height = "0px";
@@ -42,7 +41,7 @@ function transitions() {
     }, 1000);
 }
 
-// Transition will be done if was not yet done before.
+// Transition will be done if it isn't yet done before.
 // If is activated with the mouse wheel conditions are
 // not needed.
 function onWheelReaction() {

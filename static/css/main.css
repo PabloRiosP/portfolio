@@ -1,24 +1,21 @@
 :root {
-	--main-bg:       #E2E4FF;
-	--header-bg:        #283080;
-	--sidebar-bg:       #7079DE;
+	--main-bg:      #E2E4FF;
+	--header-bg:    #283080;
+	--sidebar-bg:   #7079DE;
 }
 
 body {
 	background: var(--main-bg);
 }
 
-/*.fullscreen div.row {
-
-}*/
-
 #welcome_screen {
 	background: var(--header-bg);
     position: fixed;
-    top: 0px;
+    margin-top: 0px;
 	height: 100vh;
-	width: 100vw;
-    transition: height 1s, top 0.5s;
+	width: 100%;
+    /*margin-bottom: 0px;*/
+    transition: height 1s, margin-top 0.5s;
 }
 
 .card-project:hover {
@@ -45,10 +42,14 @@ body {
 }
 
 #nav-bar {
-    background: red;/*var(--header-bg);*/
+    background: var(--header-bg);
     position: fixed;
     top: -200px;
     width: 100%;
     display: block;
     z-index: 1;
+}
+
+#lateral-bar {
+    background: var(--sidebar-bg);
 }
