@@ -6,6 +6,12 @@
 
 body {
 	background: var(--main-bg);
+    overflow-y: hidden;
+}
+
+footer {
+    background: var(--header-bg);
+    height: 100px;
 }
 
 #welcome_screen {

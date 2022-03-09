@@ -7,7 +7,6 @@ var barheight = window.getComputedStyle(bar, null).getPropertyValue("height").to
 
 bar.style.top = `-${barheight}`;
 bar.style.transition = "top 0.5s";
-//header.style.marginBottom = barheight;
 
 function transitions() {
     // Webpage Elements
@@ -38,6 +37,7 @@ function transitions() {
     // 1s
     setTimeout(function () {
         btns.remove();
+        document.body.style.overflowY = "visible";
     }, 1000);
 }
 
