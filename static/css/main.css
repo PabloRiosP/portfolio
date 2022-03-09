@@ -20,8 +20,11 @@ footer {
     margin-top: 0px;
 	height: 100vh;
 	width: 100%;
-    /*margin-bottom: 0px;*/
     transition: height 1s, margin-top 0.5s;
+}
+
+#intro {
+	padding: 10%;
 }
 
 .card-project:hover {
@@ -36,7 +39,7 @@ footer {
 }
 
 #avatar {
-	max-width: 100%;
+	max-width: 90%;
 	height: auto;
 	border-radius: 50%;
 }
@@ -44,7 +47,6 @@ footer {
 #avatar-container {
     max-height: 100%;
     padding: 15px;
-    /*width: auto;*/
 }
 
 #nav-bar {
