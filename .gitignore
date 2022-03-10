@@ -1,5 +1,6 @@
 media
 venv
+static/documents/*
 dj_portfolio/__pycache__
 apps_portfolio/*/__pycache__
 apps_portfolio/*/migrations/__pycache__
