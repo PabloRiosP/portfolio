@@ -11,6 +11,10 @@ class Skill_Type (models.Model):
     def __str__ (self):
         return "[{0}] {1}".format(self.id, self.name)
 
+    class Meta:
+        verbose_name = 'Tipo de Habilidad'
+        verbose_name_plural = 'Tipos de Habilidad'
+
 class Skill (models.Model):
     type_skill = models.ManyToManyField(Skill_Type)
     name = models.CharField(max_length=50, verbose_name='Nombre')
@@ -21,11 +25,19 @@ class Skill (models.Model):
     def __str__ (self):
         return "[{0}] {1}".format(self.id, self.name)
 
+    class Meta:
+        verbose_name = 'Habilidad'
+        verbose_name_plural = 'Habilidades'
+
 class Credential_Type (models.Model):
     name = models.CharField(max_length=50, verbose_name='Nombre')
 
     def __str__ (self):
         return "[{0}] {1}".format(self.id, self.name)
+
+    class Meta:
+        verbose_name = 'Tipo de Credencial'
+        verbose_name_plural = 'Tipos de Credencial'
 
 class Credential (models.Model):
     type_credential = models.ManyToManyField(Credential_Type)
@@ -40,6 +52,10 @@ class Credential (models.Model):
     def __str__ (self):
         return "[{0}] {1}".format(self.id, self.name)
 
+    class Meta:
+        verbose_name = 'Credencial'
+        verbose_name_plural = 'Credenciales'
+
 class Project (models.Model):
     name = models.CharField(max_length=50, verbose_name='Nombre')
     date = models.DateField(verbose_name='Fecha', default=now)
@@ -50,3 +66,8 @@ class Project (models.Model):
 
     def __str__ (self):
         return "[{0}] {1}".format(self.id, self.name)
+
+    class Meta:
+        verbose_name = 'Proyecto'
+        verbose_name_plural = 'Proyectos'
+        ordering = ['-date']
