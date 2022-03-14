@@ -1,8 +1,8 @@
+.gitignore
 media
 venv
 static/documents/*
 dj_portfolio/__pycache__
-dj_portfolio/settings.py
 apps_portfolio/*/__pycache__
 apps_portfolio/*/migrations/__pycache__
 apps_portfolio/*/migrations/*
