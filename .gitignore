@@ -1,3 +1,4 @@
+.gitignore
 media
 venv
 static/documents/*
