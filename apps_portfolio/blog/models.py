@@ -9,7 +9,3 @@ class Blog (models.Model):
 
     def __str__(self):
         return "[{0}] {1}".format(self.id, self.title)
-
-    class Meta:
-        verbose_name = "Post"
-        verbose_name_plural = "Posts"
