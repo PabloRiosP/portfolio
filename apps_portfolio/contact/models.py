@@ -6,6 +6,10 @@ class Social_Type (models.Model):
     def __str__ (self):
         return "[{0}] {1}".format(self.id, self.name)
 
+    class Meta:
+        verbose_name = "Social Media Type"
+        verbose_name_plural = "Social Media Types"
+
 class Social (models.Model):
     type_social = models.ManyToManyField(Social_Type)
     name = models.CharField(verbose_name='Nombre', max_length=30, default='UNNAMED')
@@ -15,6 +19,10 @@ class Social (models.Model):
     def __str__(self):
         return "[{0}] {1}".format(self.id, self.name)
 
+    class Meta:
+        verbose_name = "Social Media"
+        verbose_name_plural = "Social Medias"
+
 class Contact (models.Model):
     name = models.CharField(max_length=30, verbose_name='Nombre', blank=False, null=False)
     mail = models.EmailField(max_length=255, verbose_name='Correo', blank=False, null=False)
@@ -23,4 +31,8 @@ class Contact (models.Model):
 
     def __str__(self):
         return "[{0}] {1}".format(self.id, self.subject)
+
+    class Meta:
+        verbose_name = "Contact Request"
+        verbose_name_plural = "Contact Requests"
 

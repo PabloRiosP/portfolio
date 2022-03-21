@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Blog
+from .models import Post
 
-@admin.register(Blog)
-class ContactAdmin(admin.ModelAdmin):
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'date')

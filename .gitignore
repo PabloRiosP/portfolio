@@ -1,6 +1,8 @@
 media
 venv
 static/documents/*
+static/audio/*
+static/video/*
 dj_portfolio/__pycache__
 apps_portfolio/*/__pycache__
 apps_portfolio/*/migrations/__pycache__

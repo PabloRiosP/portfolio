@@ -1,10 +1,9 @@
 from django.urls import path
-from .views import renderProjects, renderProjectDetail, renderTest
+from .views import renderHome, renderProject
 
 app_name = 'projects'
 
 urlpatterns = [
-    path('', renderProjects, name='projects'),
-    path('projects/<int:Id>', renderProjectDetail, name='project'),
-    path('test', renderTest, name='test')
+    path('', renderHome, name='home'),
+    path('projects/<int:Id>', renderProject, name='project'),
 ]

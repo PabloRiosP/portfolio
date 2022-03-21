@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block styles %}
+    <link href="{% static 'css/project.css' %}" rel="stylesheet" type="text/css">
+{% endblock styles %}
+
+{% block content %}
+<main id="main-container" class="container-md">
+    <h1 id="title">{{project.name}}</h1>
+    <span id="date">{{project.publication_date}}</span>
+    {{project.long_description|safe}}
+</main>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/project.js' %}" type="text/javascript"></script>
+{% endblock scripts %}

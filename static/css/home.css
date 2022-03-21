@@ -1,0 +1,32 @@
+body {
+    overflow-y: hidden;
+}
+
+#welcome_screen {
+    background: var(--header-bg);
+    position: fixed;
+    margin-top: 0px;
+    height: 100vh;
+    width: 100%;
+    transition: height 1s, margin-top 0.5s;
+    z-index: 1;
+}
+
+#welcome_buttons {
+    display: inherit;
+    opacity: 1.0;
+    transition: opacity 0.5s;
+}
+
+#avatar {
+    max-height: 100%;
+    padding: 15px;
+}
+
+#nav-bar {
+    top: -200px;
+}
+
+div#projectList {
+    z-index: 0;
+}

@@ -6,21 +6,11 @@
 
 body {
 	background: var(--main-bg);
-    overflow-y: hidden;
 }
 
 footer {
     background: var(--header-bg);
     height: 100px;
-}
-
-#welcome_screen {
-	background: var(--header-bg);
-    position: fixed;
-    margin-top: 0px;
-	height: 100vh;
-	width: 100%;
-    transition: height 1s, margin-top 0.5s;
 }
 
 #intro {
@@ -30,12 +20,6 @@ footer {
 .card-project:hover {
 	border: 1px solid #FFF;
 	cursor: pointer;
-}
-
-#welcome_buttons {
-    display: inherit;
-    opacity: 1.0;
-    transition: opacity 0.5s;
 }
 
 #avatar {
@@ -52,10 +36,10 @@ footer {
 #nav-bar {
     background: var(--header-bg);
     position: fixed;
-    top: -200px;
+    top: 0px;
     width: 100%;
     display: block;
-    z-index: 1;
+    z-index: 2;
 }
 
 #lateral-bar {
