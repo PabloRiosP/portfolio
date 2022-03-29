@@ -74,3 +74,27 @@ document.addEventListener('keydown', function(e) {
         onKeyDownReaction(e);
     }
 });
+
+// The document runs it when the webpage is fully loaded.
+window.addEventListener('load', (e) => {
+    var vp = document.getElementsByClassName("project-pic-viewport");
+    var pic = document.getElementsByClassName("project-picture");
+
+    for (let i = 0; i < vp.length; i++) {
+        let ph = pic[i].naturalHeight;
+        let pw = pic[i].naturalWidth;
+
+        let vh = window.getComputedStyle(vp[i], null)
+                    .getPropertyValue("height").toString();
+        let vw = window.getComputedStyle(vp[i], null)
+                    .getPropertyValue("width").toString();
+
+        if (ph > pw) {
+            pic[i].style.width = vw;
+            pic[i].style.top = `${(parseInt(vh) - ((parseInt(vw) * ph) / pw)) / 2}px`;
+        } else {
+            pic[i].style.height = vh;
+            pic[i].style.left = `${(parseInt(vw) - ((parseInt(vh) * pw) / ph)) / 2}px`;
+        }
+    }
+});

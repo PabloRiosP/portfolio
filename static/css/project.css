@@ -1,9 +1,10 @@
-main#main-container {
+header {
     margin-top: 0px;
-    padding: 5px;
 }
 
-#title {
-    padding: 5px;
+#lateral-bar a {
+    color: var(--bs-light-rgb);
+    text-decoration: none;
+    font-weight: bold;
 }
 

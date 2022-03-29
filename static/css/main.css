@@ -8,6 +8,10 @@ body {
 	background: var(--main-bg);
 }
 
+header {
+    background: var(--header-bg);
+}
+
 footer {
     background: var(--header-bg);
     height: 100px;

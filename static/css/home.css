@@ -3,7 +3,6 @@ body {
 }
 
 #welcome_screen {
-    background: var(--header-bg);
     position: fixed;
     margin-top: 0px;
     height: 100vh;
@@ -29,4 +28,22 @@ body {
 
 div#projectList {
     z-index: 0;
+}
+
+.project-pic-viewport {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.project-picture {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+@media screen and (max-width: 700px) {
+
 }

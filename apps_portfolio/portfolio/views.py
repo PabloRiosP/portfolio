@@ -15,7 +15,11 @@ def renderHome(request):
 
 def renderProject(request, Id):
     project = get_object_or_404(Project, pk=Id)
-    return render(request, 'project.html', {'project': project})
+    projects = Project.objects.all()
+    return render(request, 'project.html', {
+        'actual_project': project,
+        'projects': projects
+    })
 
 def renderTest(request):
     return render(request, 'test.html')

@@ -1,15 +1,30 @@
 {% extends 'layout.html' %}
 {% load static %}
 
+{% block title %}Welcome to my portfolio!{% endblock title %}
+
 {% block styles %}
     <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
 {% endblock styles %}
 
 {% block content %}
     {% include 'partials/header.html' %}
-    <div class="container-fluid">
+    <main id="main-container" class="container-fluid">
 	    <div class="row">
-	        <div id="lateral-bar" class="col-md-3">ASD</div>
+            {% if credentials|length > 0 or hard_skills|length > 0 or soft_skills|length > 0 %}
+	        <div id="lateral-bar" class="col-md-3">
+                {% if hard_skills|length > 0 %}
+                <h3 class="text-dark">Hard Skills</h3>
+                    {% for hs in hard_skills %}
+                    {{hs.name}}
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{hs.percentage}}%" aria-valuenow="{{hs.percentage}}" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            {% endif %}
 	        <div class="col-md-9">
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis lorem eu tristique molestie. Fusce ultrices leo id ultricies vehicula. Sed non maximus ex. Proin rhoncus placerat vulputate. Vivamus sit amet lorem ante. Nullam fermentum libero ut metus vulputate, ut dignissim metus tempor. Donec posuere lorem lectus, ac vestibulum arcu lobortis ut. Cras non lobortis metus, at hendrerit odio. Proin vulputate vel enim et sollicitudin.
@@ -23,15 +38,20 @@
 
                     {% for project in projects %}
                     <a href="{% url 'projects:project' project.id %}">
-                    <div class="col-md-4 p-4">
+                    <div class="col-md p-4">
                         <div class="card bg-title card-project">
-                            <img src="{{project.picture.url}}" alt="" class="card-img-top">
+                            <div class="project-pic-viewport">
+                                <img class="project-picture" src="{{project.picture.url}}" alt="">
+                            </div>
                             <div class="card-body">
                                 <h2>{{project.name}}</h2>
                                 <p>{{project.short_description}}</p>
 
-                                {% if project.url %}
-                                    <a href="{{project.url}}">{{project.url}}</a>
+                                {% if project.project_url %}
+                                    <a href="{{project.project_url}}"><i class="bi bi-globe2"></i></a>
+                                {% endif %}
+                                {% if project.code_url %}
+                                    <a href="{{project.code_url}}"><i class="bi bi-git"></i></a>
                                 {% endif %}
                             </div>
                         </div>
@@ -45,8 +65,7 @@
     
 	        </div>
 	    </div>
-	</div>
-
+	</main>
 {% endblock content %}
 
 {% block scripts %}
